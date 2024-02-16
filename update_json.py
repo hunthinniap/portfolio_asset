@@ -14,7 +14,7 @@ def generate_json_for_collections(folder_path, base_url):
     with open(json_file_path, 'w') as json_file:
         json.dump(photos_info, json_file, indent=4)
 
-def generate_json_for_cover(folder_path, base_url):
+def generate_json_for_cover(folder_path, base_url, category):
     json_file_path = os.path.join(folder_path, 'photos.json')
     photos_info = []
 
@@ -22,7 +22,7 @@ def generate_json_for_cover(folder_path, base_url):
         for file in files:
             if file.lower().endswith(('.png', '.jpg', '.jpeg')):
                 photo_url = os.path.join(base_url, folder_path, file).replace("\\", "/")
-                photos_info.append({"cover_url": photo_url, "title": file[:-4], "link":f"/photography/{file[:-4]}"})
+                photos_info.append({"cover_url": photo_url, "title": file[:-4], "link":f"/{category}/{file[:-4]}"})
 
     with open(json_file_path, 'w') as json_file:
         json.dump(photos_info, json_file, indent=4)
@@ -36,6 +36,6 @@ for folder in os.listdir(repo_path):
         if folder != "cover_photos":       
             generate_json_for_collections(folder_path, base_url)
         else:
-            generate_json_for_cover(folder_path,base_url)
+            generate_json_for_cover(folder_path,base_url,"photography")
 
-generate_json_for_cover("music_cover",base_url)
+generate_json_for_cover("music_cover",base_url,"music")
