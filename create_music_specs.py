@@ -1,7 +1,6 @@
 import os
 import json
 
-photo_file_path = 'music_cover/Dusklight.jpg'
 
 def generate_json_for_collections(photo_file_path):
     # Extract the photo name without extension and the extension

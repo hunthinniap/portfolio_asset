@@ -1,0 +1,20 @@
+[
+    {
+        "title": "7 Songs About Summer",
+        "img_src": "https://raw.githubusercontent.com/hunthinniap/portfolio_asset/main/Blog/7 Songs About Summer.jpg",
+        "blog_link": "https://raw.githubusercontent.com/hunthinniap/portfolio_asset/main/Blog/7 Songs About Summer.txt",
+        "date": "8/20/22"
+    },
+    {
+        "title": "On Wong Kai-Wai Special at IFC",
+        "img_src": "https://raw.githubusercontent.com/hunthinniap/portfolio_asset/main/Blog/On Wong Kai-Wai Special at IFC.jpg",
+        "blog_link": "https://raw.githubusercontent.com/hunthinniap/portfolio_asset/main/Blog/On Wong Kai-Wai Special at IFC.txt",
+        "date": "9/12/22"
+    },
+    {
+        "title": "Severance",
+        "img_src": "https://raw.githubusercontent.com/hunthinniap/portfolio_asset/main/Blog/Severance.jpg",
+        "blog_link": "https://raw.githubusercontent.com/hunthinniap/portfolio_asset/main/Blog/Severance.txt",
+        "date": "2/13/23"
+    }
+]
