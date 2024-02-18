@@ -24,14 +24,17 @@ def generate_json_for_collections(photo_file_path):
     json_file_path = os.path.join( directory_name, 'specs.json')
 
     # Write the photo specifications to the specs.json file
-    with open(json_file_path, 'w') as json_file:
-        json.dump(music_specs, json_file, indent=4)
-
-    with open(directory_name+'/lyrics.txt','w') as f:
-        pass
-
-    with open(directory_name+'/motivation.txt','w') as f:
-        pass
+    if not os.path.exists(json_file_path):
+        with open(json_file_path, 'w') as json_file:
+            json.dump(music_specs, json_file, indent=4)
+    lyrics_path = directory_name+'/lyrics.txt'
+    if not os.path.exists(lyrics_path):
+        with open(lyrics_path,'w') as f:
+            pass
+    motive_path = directory_name+'/motivation.txt'
+    if not os.path.exists(motive_path):
+        with open(motive_path,'w') as f:
+            pass
 
 photos_directory_path = 'music_cover'
 
