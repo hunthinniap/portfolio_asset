@@ -1,7 +1,8 @@
 {
     "name": "Summer Midnight Breeze",
     "description": "",
-    "sc_link": "",
-    "lyrics": "",
-    "Motivation": ""
+    "sc_id": "",
+    "sc_name": "summer-midnight-breeze",
+    "lyrics": "https://raw.githubusercontent.com/hunthinniap/portfolio_asset/main/music/Summer Midnight Breeze/lyrics.txt",
+    "Motivation": "https://raw.githubusercontent.com/hunthinniap/portfolio_asset/main/music/Summer Midnight Breeze/motivation.txt"
 }

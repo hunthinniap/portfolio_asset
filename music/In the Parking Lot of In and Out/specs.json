@@ -1,7 +1,8 @@
 {
     "name": "In the Parking Lot of In and Out",
     "description": "",
-    "sc_link": "",
-    "lyrics": "",
-    "Motivation": ""
+    "sc_id": "",
+    "sc_name": "in-the-parking-lot-of-in-and-out",
+    "lyrics": "https://raw.githubusercontent.com/hunthinniap/portfolio_asset/main/music/In the Parking Lot of In and Out/lyrics.txt",
+    "Motivation": "https://raw.githubusercontent.com/hunthinniap/portfolio_asset/main/music/In the Parking Lot of In and Out/motivation.txt"
 }

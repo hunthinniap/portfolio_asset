@@ -5,19 +5,19 @@ photo_file_path = 'music_cover/Dusklight.jpg'
 
 def generate_json_for_collections(photo_file_path):
     # Extract the photo name without extension and the extension
-    photo_name, photo_extension = os.path.splitext(os.path.basename(photo_file_path))
+    music_name, photo_extension = os.path.splitext(os.path.basename(photo_file_path))
 
     # Create a dictionary with the photo's specifications
-    photo_specs = {
-        'name': photo_name,
+    music_specs = {
+        'name': music_name,
         'description':'',
         'sc_id': "",
-        'sc_name': photo_name.lower().replace(' ','-'),
-        "lyrics": "",
-        "Motivation": ""
+        'sc_name': music_name.lower().replace(' ','-'),
+        "lyrics": f"https://raw.githubusercontent.com/hunthinniap/portfolio_asset/main/music/{music_name}/lyrics.txt",
+        "Motivation": f"https://raw.githubusercontent.com/hunthinniap/portfolio_asset/main/music/{music_name}/motivation.txt"
     }
     # Create a directory with the name of the photo
-    directory_name = f'music/{photo_name}'
+    directory_name = f'music/{music_name}'
     os.makedirs(directory_name, exist_ok=True)
 
     # Define the path for the specs.json file inside the new directory
@@ -25,7 +25,13 @@ def generate_json_for_collections(photo_file_path):
 
     # Write the photo specifications to the specs.json file
     with open(json_file_path, 'w') as json_file:
-        json.dump(photo_specs, json_file, indent=4)
+        json.dump(music_specs, json_file, indent=4)
+
+    with open(directory_name+'/lyrics.txt','w') as f:
+        pass
+
+    with open(directory_name+'/motivation.txt','w') as f:
+        pass
 
 photos_directory_path = 'music_cover'
 

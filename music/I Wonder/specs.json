@@ -1,7 +1,8 @@
 {
     "name": "I Wonder",
     "description": "",
-    "sc_link": "",
-    "lyrics": "",
-    "Motivation": ""
+    "sc_id": "",
+    "sc_name": "i-wonder",
+    "lyrics": "https://raw.githubusercontent.com/hunthinniap/portfolio_asset/main/music/I Wonder/lyrics.txt",
+    "Motivation": "https://raw.githubusercontent.com/hunthinniap/portfolio_asset/main/music/I Wonder/motivation.txt"
 }

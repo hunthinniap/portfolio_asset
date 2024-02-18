@@ -1,7 +1,8 @@
 {
     "name": "Dusklight",
     "description": "",
-    "sc_link": "",
-    "lyrics": "",
-    "Motivation": ""
+    "sc_id": "",
+    "sc_name": "dusklight",
+    "lyrics": "https://raw.githubusercontent.com/hunthinniap/portfolio_asset/main/music/Dusklight/lyrics.txt",
+    "Motivation": "https://raw.githubusercontent.com/hunthinniap/portfolio_asset/main/music/Dusklight/motivation.txt"
 }
