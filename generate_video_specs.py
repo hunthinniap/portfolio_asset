@@ -22,6 +22,7 @@ def generate_json_for_collections():
         photo_base, _ = os.path.splitext(photo)
         if not any(spec['title'] == photo_base for spec in specs):
             specs.append({
+                "img_src": f"https://raw.githubusercontent.com/hunthinniap/portfolio_asset/main/videography/{photo}",
                 "title": photo_base,
                 "description":"",
                 "ytb_id":"",
