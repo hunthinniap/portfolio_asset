@@ -4,6 +4,7 @@ Todo:
 Improve the blog view section, the title is too far away from picture;
 Add description to picture in photography collections, when mouse move over it, description will pop up.
 Clean the code from both data repo and backend repo.
+Build a dashboard to monitor website traffic.
 
 Jan 2018,
 I started building a personal website through a free wordpress template provided by the university. At that time I really didn't have anything to post so later I started a WeChat public account posting blogs and some of the first songs I wrote at that time.
