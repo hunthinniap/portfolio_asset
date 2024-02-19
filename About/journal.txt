@@ -3,6 +3,7 @@ Photography, Music, Blog, videography
 Todo: 
 Improve the blog view section, the title is too far away from picture;
 Add description to picture in photography collections, when mouse move over it, description will pop up.
+Add a banner picture to photography collections page.
 Clean the code from both data repo and backend repo.
 Build a dashboard to monitor website traffic.
 
