@@ -28,5 +28,10 @@
         "cover_url": "https://raw.githubusercontent.com/hunthinniap/portfolio_asset/main/Photography/cover_photos/Waterfront.jpg",
         "title": "Waterfront",
         "link": "/photography/Waterfront"
+    },
+    {
+        "cover_url": "https://raw.githubusercontent.com/hunthinniap/portfolio_asset/main/Photography/cover_photos/When We Were Young.jpg",
+        "title": "When We Were Young",
+        "link": "/photography/When We Were Young"
     }
 ]

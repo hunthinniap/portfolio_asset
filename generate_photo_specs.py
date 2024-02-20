@@ -38,4 +38,5 @@ for folder in os.listdir(repo_path):
         else:
             generate_json_for_cover(folder_path,base_url,"photography")
 
-generate_json_for_cover("music_cover",base_url,"music")
+generate_json_for_cover(repo_path,base_url,"photography")
+generate_json_for_collections(repo_path, base_url)
