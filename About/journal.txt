@@ -7,49 +7,51 @@ Add a banner picture to photography collections page.
 Add a banner to all section pages.
 Clean the code from both data repo and backend repo.
 Build a dashboard to monitor website traffic.
+Add movie review section (data is scraped already.)
 
-Jan 2018,
-I started building a personal website through a free wordpress template provided by the university. At that time I really didn't have anything to post so later I started a WeChat public account posting blogs and some of the first songs I wrote at that time.
+Feb 23
+Just realized journal should be reverse-chronological; test a github repo to scrape all my Donban movie reviews.
 
-Oct 2022,
-During the past years, after collecting some more songs and photos as well, I felt like there would be enough content for a personal portfolio website. I started to look for some website templates and then found that Sqaurespace provided some good ones and also with fair prices, around 200 usd a year. 
+Feb 19
+Completed the last part, videography. Finished the whole websites, but will continue improved the interface. 
 
-Oct 2023
-The website service and domain expired and I did not plan to continue paying for that. I learned that github can host static websites so I started to learn React.js and put the content from the original site to the new one. It took me some time to learn to set up, test and host on the github.
+Feb 18
+With the previous discovery on data definition, I finished the music and blog section easily.
 
-Nov 2023
-I received comments from my college classmate that react is an overkill for static websites. Meanwhile I realized that I did not want to enter all photos link/name one by one. I was looking for a way to put all photos in one folder and the webpage could display all of them. I did not figure out how to load local files on react, but also felt like data and script should be stored separately. I tried an api to query files from s3 bucket, but failed and a github api which could potentially work. I realized a backend would be easier but github did not support that so I started to look for a free python backend service. 
+Feb 17
+Started to write a developer's journal. 
 
-Jan 2024
-I did not do anything except read some system design stuff.
-
-Feb 2024
-I discovered that hugging space can be a place to host a flask service with easy continuous deployment but it was not good at rendering html templates. I found a way to do cicd with anaconda free backend service using a webhook and githook so the local branch at the backend could sync with the remote branch in the github.
-
-Feb 14
-Officially start the project with a homepage and photography section.
-The photography page contains some cover photos and links to the corresponding collections page. I have the cover photos stored at another github repo and use api to query those photo links and titles as I set them as photo names.
-Since there can be new photo collections, I want the backend to generate new urls when clicking the cover photos. But then I realized when the flask app started, you could not define a new endpoint. ChatGPT provided a solution that defines a new endpoint as photography/<collections> and points to a collections template html so it can render photos defined by the collections name.
+Feb 16
+I tried to do something fancy like a scroll view of photos but it required some js work so later I decided to remove this feature to keep things simple within .css capacity. And thus completed the work of photography.
+With previous experience, music templates were easier. I designed a layout of the page and asked chat gpt to do the coding. 
 
 Feb 15
 The collections templates also require a github api call to query the photo info but later the api timeout since there were too many calls. It made sense that calling the api every time starting the webpage was not a good practice so I created a query script to store that info locally. The task can be run daily.
 But the backend failed to find the file locally. It occurred to me that it would be more reasonable to have the photo information json file updated whenever I make changes in the website asset repo so no more api calls are needed. I wanted to take advantage of githook but in this way it will create or make changes to the json files. Then I needed to add them again which would cause a loop unless I stored the files elsewhere which was unnecessary. So I created a script to do that, first created the new json files and then did git add.
 (so far I realized that I could go back to the no backend method I originally adapted by using github page with no backend since React has similar dynamic endpoint definition)
 
-Feb 16
-I tried to do something fancy like a scroll view of photos but it required some js work so later I decided to remove this feature to keep things simple within .css capacity. And thus completed the work of photography.
-With previous experience, music templates were easier. I designed a layout of the page and asked chat gpt to do the coding. 
+Feb 14
+Officially start the project with a homepage and photography section.
+The photography page contains some cover photos and links to the corresponding collections page. I have the cover photos stored at another github repo and use api to query those photo links and titles as I set them as photo names.
+Since there can be new photo collections, I want the backend to generate new urls when clicking the cover photos. But then I realized when the flask app started, you could not define a new endpoint. ChatGPT provided a solution that defines a new endpoint as photography/<collections> and points to a collections template html so it can render photos defined by the collections name.
 
-Feb 17
-Started to write a developer's journal. 
+Feb 2024
+I discovered that hugging space can be a place to host a flask service with easy continuous deployment but it was not good at rendering html templates. I found a way to do cicd with anaconda free backend service using a webhook and githook so the local branch at the backend could sync with the remote branch in the github.
 
-Feb 18
-With the previous discovery on data definition, I finished the music and blog section easily.
+Jan 2024
+I did not do anything except read some system design stuff.
 
-Feb 19
-Completed the last part, videography. Finished the whole websites, but will continue improved the interface. 
+Nov 2023
+I received comments from my college classmate that react is an overkill for static websites. Meanwhile I realized that I did not want to enter all photos link/name one by one. I was looking for a way to put all photos in one folder and the webpage could display all of them. I did not figure out how to load local files on react, but also felt like data and script should be stored separately. I tried an api to query files from s3 bucket, but failed and a github api which could potentially work. I realized a backend would be easier but github did not support that so I started to look for a free python backend service. 
 
+Oct 2023
+The website service and domain expired and I did not plan to continue paying for that. I learned that github can host static websites so I started to learn React.js and put the content from the original site to the new one. It took me some time to learn to set up, test and host on the github.
 
+Oct 2022,
+During the past years, after collecting some more songs and photos as well, I felt like there would be enough content for a personal portfolio website. I started to look for some website templates and then found that Sqaurespace provided some good ones and also with fair prices, around 200 usd a year. 
+
+Jan 2018,
+I started building a personal website through a free wordpress template provided by the university. At that time I really didn't have anything to post so later I started a WeChat public account posting blogs and some of the first songs I wrote at that time.
 
 
 
