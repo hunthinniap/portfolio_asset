@@ -5,6 +5,8 @@ from generate_specs_template import MainPageSpecsGenerator
 
 class MusicPageSpecsGenerator(MainPageSpecsGenerator):
     def addition_specs(self,photo_base) -> dict:
+        directory_name = f"{self.folder_path}/{photo_base}"
+        os.makedirs(directory_name, exist_ok=True)
         lyrics_file_path = os.path.join(self.folder_path, f"{photo_base}/lyrics.txt")
         motivation_file_path = os.path.join(self.folder_path, f"{photo_base}/motivation.txt")
         if not os.path.exists(lyrics_file_path):
@@ -13,8 +15,8 @@ class MusicPageSpecsGenerator(MainPageSpecsGenerator):
         if not os.path.exists(motivation_file_path):
             with open(motivation_file_path, "w") as file:
                 pass
-        return {
-        }
+        return {"sc_id": ""
+        }        
 
 
 music_specs_generator = MusicPageSpecsGenerator("music")
@@ -53,25 +55,6 @@ def generate_json_for_collections(photo_file_path):
             pass
 
 
-photos_directory_path = "music_cover"
 
-# List all files in the directory
-all_files = os.listdir(photos_directory_path)
-
-# Filter for photo files with common image file extensions
-photo_files = [
-    file
-    for file in all_files
-    if file.lower().endswith(
-        (
-            ".jpg",
-            ".jpeg",
-            ".png",
-        )
-    )
-]
-
-# Iterate over the photo files and generate JSON for each
-for photo_file in photo_files:
-    photo_file_path = os.path.join(photos_directory_path, photo_file)
-    generate_json_for_collections(photo_file_path)
+music_specs_generator = MusicPageSpecsGenerator('music')
+music_specs_generator.generate_json_for_main_page()

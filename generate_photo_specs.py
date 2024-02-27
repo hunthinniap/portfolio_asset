@@ -1,52 +1,39 @@
 import os
 import json
+from generate_specs_template import MainPageSpecsGenerator
 
+class PhotoSpecsGenerator(MainPageSpecsGenerator):
+    def addition_specs(self,photo_base) -> dict:
+        folder_path = f"{self.folder_path}/{photo_base}"
 
-def generate_json_for_collections(folder_path, base_url):
-    json_file_path = os.path.join(folder_path, "specs.json")
-    photos_info = []
+        photos = [
+            photo
+            for photo in os.listdir(folder_path)
+            if os.path.isfile(os.path.join(folder_path, photo))
+        ]
 
-    for root, dirs, files in os.walk(folder_path):
-        for file in files:
-            if file.lower().endswith((".png", ".jpg", ".jpeg")):
-                photo_url = os.path.join(base_url, folder_path, file).replace("\\", "/")
-                photos_info.append({"src": photo_url, "alt": ""})
-
-    with open(json_file_path, "w") as json_file:
-        json.dump(photos_info, json_file, indent=4)
-
-
-def generate_json_for_cover(folder_path, base_url, category):
-    json_file_path = os.path.join(folder_path, "specs.json")
-    photos_info = []
-
-    for root, dirs, files in os.walk(folder_path):
-        for file in files:
-            if file.lower().endswith((".png", ".jpg", ".jpeg")):
-                photo_url = os.path.join(base_url, folder_path, file).replace("\\", "/")
-                photos_info.append(
-                    {
-                        "cover_url": photo_url,
-                        "title": file[:-4],
-                        "description": "",
-                        "link": f"/{category}/{file[:-4]}",
-                    }
-                )
-
-    with open(json_file_path, "w") as json_file:
-        json.dump(photos_info, json_file, indent=4)
-
-
-base_url = "https://raw.githubusercontent.com/hunthinniap/portfolio_asset/main/"
-repo_path = "Photography"  # Update this path
-
-for folder in os.listdir(repo_path):
-    folder_path = os.path.join(repo_path, folder)
-    if os.path.isdir(folder_path):
-        if folder != "cover_photos":
-            generate_json_for_collections(folder_path, base_url)
+        specs_file_path = f"{folder_path}/specs.json"
+        if os.path.exists(specs_file_path):
+            with open(specs_file_path, "r") as file:
+                specs = json.load(file)
         else:
-            generate_json_for_cover(folder_path, base_url, "photography")
+            specs = []
+        
+        # Step 4: For each photo, check if its name exists in the blog specs. If not, append a new dictionary.
+        for photo in photos:
+            collection_photo_base, _ = os.path.splitext(photo)
+            if not any(spec["title"] == collection_photo_base for spec in specs):
+                basic_specs = {
+                    "title": collection_photo_base,
+                    "description":""
+                }
+                specs.append(basic_specs)
 
-generate_json_for_cover(repo_path, base_url, "photography")
-generate_json_for_collections(repo_path, base_url)
+        # Step 5: Save the updated blog specs back to the JSON file.
+        with open(specs_file_path, "w") as file:
+            json.dump(specs, file, indent=4)
+
+        return {}
+
+photo_specs_generator = PhotoSpecsGenerator("photography")
+photo_specs_generator.generate_json_for_main_page()

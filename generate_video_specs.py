@@ -4,7 +4,6 @@ from generate_specs_template import MainPageSpecsGenerator
 class VideoPageSpecsGenerator(MainPageSpecsGenerator):
     def addition_specs(self,photo_base) -> dict:
         return {
-            "description": "",
             "ytb_id": "",
         }
 

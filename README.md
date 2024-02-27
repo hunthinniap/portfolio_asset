@@ -13,7 +13,7 @@ And any src should be compiled in the backend, in case of changing the file stor
 ```
 /portfolio_asset
 ├── main
-	├── cover_photo.jpg
+    ├── cover_photo.jpg
 	├──section_photo.jpg
 	└── Specs.json
 ├── about

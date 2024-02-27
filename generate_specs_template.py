@@ -32,8 +32,8 @@ class MainPageSpecsGenerator:
             photo_base, _ = os.path.splitext(photo)
             if not any(spec["title"] == photo_base for spec in specs):
                 basic_specs = {
-                    "img_src": f"https://raw.githubusercontent.com/hunthinniap/portfolio_asset/main/videography/{photo}",
                     "title": photo_base,
+                    "description":""
                 }
                 basic_specs.update(self.addition_specs(photo_base))
                 specs.append(basic_specs)
