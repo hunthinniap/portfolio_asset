@@ -8,6 +8,7 @@ specs.json is needed when something is iterable with these default attributes
 └──Title: Subsection_name
 And any src should be compiled in the backend, in case of changing the file storage
 
+```
 /portfolio_asset
 ├── main
 	├── cover_photo.jpg
@@ -52,4 +53,4 @@ And any src should be compiled in the backend, in case of changing the file stor
 	├──description:
 	└── ytb_id:
 
-
+```
