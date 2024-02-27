@@ -9,6 +9,9 @@ Clean the code from both data repo and backend repo.
 Build a dashboard to monitor website traffic.
 Add movie review section (data is scraped already.)
 
+Feb 27
+Propose folder structure changes
+
 Feb 23
 Just realized journal should be reverse-chronological; test a github repo to scrape all my Donban movie reviews.
 
