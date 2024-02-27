@@ -3,9 +3,11 @@ hunthinniap.pythonanywhere.com
 
 Folder Structure Design
 specs.json is needed when something is iterable with these default attributes
+```
 └── Specs.json
 ├──description: {page_description}
 └──Title: Subsection_name
+```
 And any src should be compiled in the backend, in case of changing the file storage
 
 ```
