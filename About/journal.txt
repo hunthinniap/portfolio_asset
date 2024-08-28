@@ -1,13 +1,23 @@
 Done: 
 Photography, Music, Blog, videography
 Todo: 
-Improve the blog view section, the title is too far away from picture;
+√ Improve the blog view section, the title is too far away from picture;
+(Now I think it is fine)
 Add description to picture in photography collections, when mouse move over it, description will pop up.
 Add a banner picture to photography collections page.
 Add a banner to all section pages.
 Clean the code from both data repo and backend repo.
 Build a dashboard to monitor website traffic.
+(Traffic data are parsed, still looking for visualization tool)
 Add movie review section (data is scraped already.)
+
+Aug 27
+Add mobile view of the webpage by adding a popup navigation bar which require JavaScript and no longer is web1.0-like.
+Testing layout by continuously pushing code and checking changes on my phone so it probablly won't look the optimal if you not using promax size phonescreen.
+Add traffic data analysis cron job. I intended to use sql but it turned out too complicated so I just used a large json file to store everything until the cpu becomes a bottleneck.
+
+Feb 27
+Propose folder structure changes
 
 Feb 23
 Just realized journal should be reverse-chronological; test a github repo to scrape all my Donban movie reviews.
